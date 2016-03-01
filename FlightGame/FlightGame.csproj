@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Obstakel.xaml.cs">
+      <DependentUpon>Obstakel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TempPlane.xaml.cs">
       <DependentUpon>TempPlane.xaml</DependentUpon>
     </Compile>
@@ -73,6 +76,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Obstakel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TempPlane.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -111,6 +118,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="foto vliegt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Roads0126_1_S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Achtergrond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="StansRants_8Bit_Standing.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
