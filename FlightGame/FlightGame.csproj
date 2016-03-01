@@ -120,6 +120,12 @@
     <Resource Include="foto vliegt.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Roads0126_1_S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Achtergrond.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="StansRants_8Bit_Standing.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

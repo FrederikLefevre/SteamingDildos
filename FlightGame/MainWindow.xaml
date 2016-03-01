@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlightGame"
         mc:Ignorable="d"
-        Title="MainWindow" WindowState="Maximized" WindowStyle="None" Loaded="MainWindow_OnLoaded">
-    
-    <Canvas Name="PlayArea" MouseMove="MovePlane_OnMouseMove" >
-        <local:Vliegtuig x:Name="Plane" MouseLeftButtonDown="GrabPlane_OnMouseLeftButtonDown"/>
-        <local:Obstakel/>
+        Title="MainWindow" WindowState="Maximized" WindowStyle="None" Loaded="MainWindow_OnLoaded"
+        Background="Black">
+    <Grid> 
+    <Canvas Name="PlayArea" MouseMove="MovePlane_OnMouseMove" Background="Transparent">
+        <local:Vliegtuig x:Name="Plane" MouseLeftButtonDown="GrabPlane_OnMouseLeftButtonDown"/>    
     </Canvas>
+        <Image Source="Achtergrond.png" Stretch="Fill" Panel.ZIndex="-1" Opacity="50"></Image>
+    </Grid>
 </Window>
