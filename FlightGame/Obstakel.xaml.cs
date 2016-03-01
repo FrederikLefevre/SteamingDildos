@@ -25,7 +25,7 @@ namespace FlightGame
             InitializeComponent();
 
             Random rnd = new Random();
-            IMG.Width = (double)rnd.Next(32, 129);
+            IMG.Width = (double)rnd.Next(64, 257);
 
         }
     }

@@ -3,6 +3,7 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
@@ -19,19 +20,28 @@ namespace FlightGame
         private bool _planeTaken = false;
         DispatcherTimer _timer = new DispatcherTimer();
         Random _rnd = new Random();
+        private MediaPlayer musicPlayer = new MediaPlayer();
 
         //Constructors
         //=============
         public MainWindow()
         {
             InitializeComponent();
+
+            this.musicPlayer.Open(new Uri("Teamheadkick - Deadpool Rap (Movie Version).mp3", UriKind.RelativeOrAbsolute));
+            this.musicPlayer.MediaEnded += delegate
+            {
+                this.musicPlayer.Position = TimeSpan.Zero;
+                this.musicPlayer.Play();
+            };
+            this.musicPlayer.Play();
         }
 
         //Methods
         //========
         private void SpawnPlane()
         {
-            TempPlane newPlane = new TempPlane();
+            Obstakel newPlane = new Obstakel();
 
             double xPos = this._rnd.Next((int)this.Plane.Width, (int) this.PlayArea.ActualWidth);
 
@@ -92,9 +102,9 @@ namespace FlightGame
             Canvas.SetTop(this.Plane, startHeight);
             Canvas.SetLeft(this.Plane, startWidth);
 
-            this._timer.Interval = TimeSpan.FromSeconds(1.0);
+            this._timer.Interval = TimeSpan.FromSeconds(0.2);
             this._timer.Tick += delegate { SpawnPlane(); };
             this._timer.Start();
         }
-    }
+}
 }
