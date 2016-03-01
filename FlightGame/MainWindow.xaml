@@ -8,6 +8,7 @@
         Title="MainWindow" WindowState="Maximized" WindowStyle="None" Loaded="MainWindow_OnLoaded">
     
     <Canvas Name="PlayArea" MouseMove="MovePlane_OnMouseMove" >
-        <local:Vliegtuig x:Name="Plane" MouseLeftButtonDown="GrabPlane_OnMouseLeftButtonDown"/>    
+        <local:Vliegtuig x:Name="Plane" MouseLeftButtonDown="GrabPlane_OnMouseLeftButtonDown"/>
+        <local:Obstakel/>
     </Canvas>
 </Window>
